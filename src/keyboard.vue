@@ -1,8 +1,8 @@
 <template lang="jade">
 	.vue-touch-keyboard
 		.keyboard
-			.line(v-for="(line, lindex) in keySet", key="lindex")
-				span(v-for="(key, index) in line", key="index", :class="getClassesOfKey(key)", v-text="getCaptionOfKey(key)", @click="clickKey(key)", @mousedown="mousedown", :style="getKeyStyle(key)")
+			.line(v-for="line in keySet")
+				span(v-for="key in line", :class="getClassesOfKey(key)", v-text="getCaptionOfKey(key)", @click="clickKey(key)", @mousedown="mousedown", :style="getKeyStyle(key)")
 
 </template>
 
