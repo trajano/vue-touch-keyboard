@@ -2,7 +2,7 @@
 	.vue-touch-keyboard
 		// input(type="text", v-model="keyboardText", v-if="!input")
 		.keyboard
-			.line(v-for="(line, index) in keySet", key="index")
+			.line(v-for="(line, lindex) in keySet", key="lindex")
 				span(v-for="(key, index) in line", key="index", :class="getClassesOfKey(key)", v-text="getCaptionOfKey(key)", @click="clickKey(key)", @mousedown="mousedown", :style="getKeyStyle(key)")
 
 </template>
